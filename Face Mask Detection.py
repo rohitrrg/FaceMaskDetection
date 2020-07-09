@@ -33,9 +33,9 @@ while True:
         x2, y2 = x1 + width, y1 + height
         crop_image = gray[y1:y2, x1:x2]
         res = recognize(crop_image)
-        if res=='Mask':
+        if res == 'Mask':
             cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 2)
-        elif res=='No Mask':
+        elif res == 'No Mask':
             cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 0, 255), 2)
 
         cv2.putText(frame, str(res), (x1 + 5, y1 - 5), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2)
