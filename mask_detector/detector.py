@@ -1,6 +1,5 @@
 import cv2
 import numpy as np
-import tensorflow as tf
 import keras
 
 face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
@@ -30,7 +29,7 @@ class MaskDetector(object):
 
             img = cv2.resize(crop_image, (50, 50))
             x = np.array(img).reshape(-1, 50, 50, 1)
-            x = tf.keras.utils.normalize(x, axis=1)
+            x = keras.utils.normalize(x, axis=1)
 
             pred = model.predict(x)
             pred = np.argmax(pred, axis=1)
