@@ -1,9 +1,10 @@
 import cv2
 import numpy as np
 import tensorflow as tf
+import keras
 
 face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
-model = tf.keras.models.load_model('model_new.h5')
+model = keras.models.load_model('model_new.h5')
 
 
 class MaskDetector(object):
