@@ -1,4 +1,5 @@
-Flask==1.1.2
-gunicorn==19.9.0
-numpy==1.18.1
-keras==2.4.3
+Flask
+gunicorn
+numpy
+keras
+opencv-contrib-python-headless
